@@ -3,7 +3,7 @@
 region              = "East US 2"
 #region              = "Canada Central"
 resource_group_name = "transit-vnet-common"
-name_prefix         = "pnadeau-"
+name_prefix         = "fuelstx-"
 tags = {
   "CreatedBy"     = "Palo Alto Networks"
   "CreatedWith"   = "Terraform"
