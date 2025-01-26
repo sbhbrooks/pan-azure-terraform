@@ -2,7 +2,7 @@
 
 region                = "North Europe"
 resource_group_name   = "panorama"
-name_prefix           = "pan-nadeau-"
+name_prefix           = "fuel-pan"
 create_resource_group = true
 tags = {
   "CreatedBy"     = "Palo Alto Networks"
@@ -14,7 +14,7 @@ tags = {
 
 vnets = {
   "vnet" = {
-    name          = "panorama-vnet"
+    name          = "fuel-panorama-vnet"
     address_space = ["10.1.0.0/27"]
     network_security_groups = {
       "panorama" = {
@@ -36,7 +36,7 @@ vnets = {
     }
     subnets = {
       "panorama" = {
-        name                       = "panorama-snet"
+        name                       = "fuel-panorama-snet"
         address_prefixes           = ["10.1.0.0/28"]
         network_security_group_key = "panorama"
       }
@@ -48,7 +48,7 @@ vnets = {
 
 panoramas = {
   "pn-1" = {
-    name     = "panorama01"
+    name     = "fuel-panorama01"
     vnet_key = "vnet"
     authentication = {
       disable_password_authentication = false
@@ -60,7 +60,7 @@ panoramas = {
     virtual_machine = {
       size      = "Standard_D5_v2"
       zone      = null
-      disk_name = "panorama-os-disk"
+      disk_name = "fuel-panorama-os-disk"
     }
     interfaces = [
       {
